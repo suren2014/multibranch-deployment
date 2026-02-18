@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
-        git url:"", branch:"main"
+        git url:"https://github.com/suren2014/multibranch-deployment.git", branch:"main"
       }
     }
      stage('BUILD') {
