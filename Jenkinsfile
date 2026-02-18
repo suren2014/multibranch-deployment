@@ -22,7 +22,7 @@ pipeline {
       steps {
         sh " docker stop $CONTAINER_NAME || true "
         sh " docker rm $CONTAINER_NAME || true "
-        sh " docker run -d --name $CONTAINER_NAME -p 9000:80 restart always $IMAGE_NAME:$IMAGE_TAG "
+        sh " docker run -d --name $CONTAINER_NAME -p 9001:80 restart always $IMAGE_NAME:$IMAGE_TAG "
       }
      }
   }
