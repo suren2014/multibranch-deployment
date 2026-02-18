@@ -26,6 +26,14 @@ pipeline {
       }
      }
   }
+  post {
+    success {
+      clean Ws()
+    }
+    failure {
+      echo "PIPELINE FAILED, PLEASE CHECK THE LOGS"
+    }
+  }
 }
     
       
